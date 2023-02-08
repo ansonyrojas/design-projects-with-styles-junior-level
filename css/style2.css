@@ -1,0 +1,83 @@
+body{
+
+	padding: 0;
+	margin: 0;
+	font-family: Arial, Helvetica, Sans-serif;
+
+}
+
+/*first let's fix the cells and spaces between the borders*/
+
+table{
+
+	border-spacing: 0;
+	border-collapse: collapse;
+	width: 800px;
+	margin: 100px auto;
+
+}
+
+/*we style our title/caption*/
+
+caption {
+
+	background: #eee;
+	padding: 5px;
+	font-size: 25px;
+	font-weight: bolder;
+	text-shadow: 2.5px 1px  0px #000;
+	border: solid 2px #ccc;
+}
+
+
+/*we put a border to our rows and columns, inside our table*/
+
+td, th{
+
+	border:solid 1px #ccc;
+	padding: 5px;
+}
+
+/*with nth child we add a background color every 2 rows*/
+
+tr:nth-child(even){
+
+	background-color:#eee;
+
+}
+
+
+/*we center the columns from the third with a text-align*/
+
+td:nth-child(n + 3), th:nth-child(n + 3){
+
+	text-align: center;
+
+}
+
+/*effect for rows on hover*/
+
+tbody tr:hover{
+
+	background-color: rgb(160,222,225);
+
+}
+
+/*we style our header and add a sticky position*/
+
+thead{
+
+	background-color: black;
+	color: white;
+	position: sticky;
+	top: 0;
+
+}
+
+
+/*We remove the borders from the last columns of our table, to give our calculation document a more organized effect*/
+
+tr th[class*=none]{
+
+	border:none;
+}
