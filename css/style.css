@@ -1,0 +1,173 @@
+body{
+
+	font-family: Arial, Helvetica, san-serif;
+	margin: 0;
+	padding: 0;
+
+
+}
+
+/*we use display none to hide our menu*/
+.collapse{
+
+	display: none;
+}
+
+/*we make a default definition for the properties of the element queried through google*/
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+
+}
+
+/*we apply styles to our menu*/
+
+
+nav{
+
+	background-color: #000;	
+	color: #fff;
+	width: 100%;
+}
+
+/*Here we hide our mobile menu, since we don't need it in case the resolution is for phone.*/
+
+nav .mobile{
+
+	display: none;
+
+}
+
+/*we add a style to our header, giving it a space between elements and centering them within its container*/
+
+nav .mobile .header {
+
+	display: flex;
+	padding-left: 10px;
+	align-items: center;
+	justify-content: space-between;
+
+}
+
+/*we style our button that we will use later to hide our menu*/
+
+nav .mobile .header .more button {
+
+	border: none;
+	background-color: #000;
+	color:#fff;
+	padding:15px;
+	cursor: pointer;
+
+
+
+}
+
+/*we resized our logo*/
+
+nav .logo{
+
+	padding:25px;
+	min-width: 250px;
+}
+
+/*We give style to each of the elements that redirect us, to different spaces, within our website*/
+
+nav a{
+
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	padding: 20px 25px;
+}
+
+/*we provide a hover effect to our menu*/
+
+nav a:hover{
+
+	color: #000;
+	background-color: rgb(0,195,255); 
+
+}
+
+/*we align and give a space to our current menu within a pc*/
+
+nav .deskptop{
+
+	display: flex;
+
+	justify-content: space-between;
+
+	align-items: center;
+	padding:0px, 20px;
+
+}
+
+/*We use our flex, so that the desktop menu looks more organized*/
+nav .deskptop .primary,
+nav .deskptop .secondary
+{
+
+	display: flex;
+
+}
+
+nav .deskptop .secondary.mini{
+
+	 display: none;
+}
+
+
+ /*with media screen, we add certain features within the defined resolution*/
+
+@media screen and (max-width:853px){
+
+	nav .logo {
+
+		min-width: 100px;
+	}
+
+	nav .secondary.full{
+		display: none;
+
+	}
+
+	nav .secondary.mini{
+		display: block !important;
+	}
+
+	nav .secondary.mini .submenu{
+
+		position: absolute;
+		background-color: #000;
+		display: none;
+		width: 200px;
+		right: 0px;
+	}
+
+	nav	.secondary.mini:hover .submenu {
+
+		display: block;
+
+
+
+
+	}
+}
+
+@media screen and (max-width: 500px){
+
+	 nav .deskptop{
+
+	 	display: none;
+	 }
+
+	 nav .mobile{
+
+	 	 display: block;
+	 }
+}
