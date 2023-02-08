@@ -1,0 +1,119 @@
+body	{
+
+	padding:0;
+	margin:0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/*We define the size of the author's image*/
+
+.cards .card .author img{
+
+	width: 50px;
+
+}
+
+/*now we define the size of the letter container*/
+
+.cards {
+	padding: 50px;
+	width: 100%;
+	display: flex;
+}
+
+/*we give a style to each of the cards with a relative position,
+
+ to be able to move them and thus give them the animation that we want*/
+
+.cards .card{
+	box-shadow:-3px 0 10px rgba(0,0,0,0.3), -4px 0px 10px rgba(0,0,0,0.2), -5px 0px 10px rgba(0,0,0,0.1);
+	background:rgb(0,144,255);
+	color: #fff;
+	width: 300px;
+	height: 350px;
+	border-radius: 10px;
+	padding: 30px;
+	box-sizing: border-box;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	transition: all 0.3s ease;
+}
+
+/*we give an effect to our author link*/
+
+.cards .card a{
+
+	color:yellow;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+/*a small hover to give more lighting to the letter, when selecting the author*/
+
+.cards .card a:hover{
+
+	color:lightyellow;
+
+}
+
+/*We add a flex to give it a spacing between the title and the author*/
+.cards .card .header {
+
+	flex: 1;
+
+}
+
+
+/*We apply the animation effect for each of the cards when passing the mouse cursor: HOVER*/
+
+.cards .card:hover{
+	margin-right: 80px;
+	transform: rotate(3deg) translateY(-15px) ;
+}
+
+
+/*we add a padding to the date*/
+
+.cards .card .header .date{
+
+	padding:10px 0;
+}
+
+/*we change the size of our font*/
+
+.cards .card .header .title{
+
+	font-size: 28px;
+}
+
+/*We add a line spacing to our author's link*/
+
+.cards .card footer .author a{
+	grid-gap:10px;
+	display: flex;
+	align-items: center;
+}
+
+/*We make a modification to our image to turn it into a circle, we do that with border-radius*/
+
+.cards .card footer img{
+	width: 48px;
+	border-radius: 50%;
+}
+
+/*select all the classes that contain "elements" and give them a margin to join them and they can be seen one after the other*/
+
+.cards .card[class*="element"]{
+
+	margin-left: -100px;
+
+}
+
+/*We subtract the margin a little from these last two so that the output effect of the letter can be seen a little more*/
+
+.element-1:hover, .element-2:hover{
+
+	margin-left: -130px;
+
+}
